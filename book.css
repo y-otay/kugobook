@@ -1,0 +1,153 @@
+.tab-001 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    position:fixed;
+    top:80px;
+    left:50%;
+    margin-left:-50vw;
+    
+}
+
+.tab-001 > label {
+    flex: 1 1;
+    order: -1;
+    min-width: 70px;
+    padding: .7em 1em .5em;
+    border-radius: 5px 5px 0 0;
+    color: lightslategray;
+    font-size: .9em;
+    text-align: center;
+    cursor: pointer;
+    top: 80px;
+
+}
+
+.tab-001 input {
+    display: none;
+}
+
+.tab-001 > div {
+    display: none;
+    width: 100%;
+    padding: 1.5em 1em;
+}
+#tab1{
+    background-color: lavender;
+}
+#tab2{
+    background-color: paleturquoise;
+}
+#tab01{
+    background-color: lavender;
+    overflow: auto;
+    height:80vh;
+    scrollbar-width: none;
+
+}
+#tab02{
+    background-color: paleturquoise;
+    overflow: auto;
+    height:80vh;
+    scrollbar-width: none;
+}
+#tab01::-webkit-scrollbar { 
+    display: none;
+  }
+#tab02::-webkit-scrollbar { 
+    display: none;
+}
+  
+  
+div{
+    margin:0 auto;
+}
+.tab-001 label:has(:checked) {
+    background-color:lavender;
+    border-color:sandybrown;
+    border-style: solid;
+    border-width: 0px 0px 2px;
+    border-radius: 5px 5px 0 0;
+    color: lightslategray;
+}
+
+.tab-001 label:has(:checked) + div {
+    display: block;
+}
+html.tab-001,h1,body > p{
+    font-family: "arial unicode ms",sans-serif;
+
+}
+h1{
+    font-size: 20px;
+    color: orange;
+    position: fixed;
+    top: 5px;
+    left:50%;
+    margin-left: -1em;
+
+}
+body > p{
+    text-align: center;
+    font-size: 15px;
+    color: orange;
+    position: fixed;
+    top: 35px;
+    left:50%;
+    margin-left:-12em ;
+}
+td{
+    border-radius:15px;
+    border:0px solid skyblue;
+    width:20vw;
+    height:20vw;
+    
+
+}
+#target1 td{
+    background-color: lavenderblush;
+}
+#target2 td{
+    background-color: lightcyan;
+}
+table{
+    margin:auto;
+    border-collapse: separate;
+    border-spacing: 7px;
+    max-height :90vh;
+}
+#back{
+    position: fixed;
+    bottom:40px;
+    left:50%;
+    margin-left:-20px;
+    width:40px;
+    height:auto;
+    z-index:100;
+}
+body{
+	animation: bgchange 12s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+}
+
+@keyframes bgchange{
+      0%   {background:#ffe6e1;}/*変化させたい色*/
+      25%  {background:#fdcb9e;}/*変化させたい色*/
+      50%  {background:#fdcbc1;}/*変化させたい色*/
+      75%  {background:#ffff8c;}/*変化させたい色*/
+      90%  {background:#b2dffb;}/*変化させたい色*/
+      100% {background:#ffe6e1;}/*変化させたい色*/
+ }
+ 
+td img{
+    max-width:20vw;
+    max-height:20vw;
+    margin:0 auto;
+    border-radius:15px;
+}
+td p{
+    text-align: center;
+    margin:auto;
+    font-size:150%;
+    color:lightslategray;
+    font-family: "Consolas",sans-serif
+}    

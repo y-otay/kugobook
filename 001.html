@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="character.css"></rink>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yamanaka.html</title>
+</head>
+<body>
+    <div class="image">
+        <img src="c:\Users\3110m\Downloads\17823.jpg">
+    </div>
+    <div class="prize">
+              <img src="https://3.bp.blogspot.com/-0y420NtZ4rg/VFIdPqf0S_I/AAAAAAAAoqw/LDKuQpNJF0E/s800/nobel_medal.png">  
+    </div>
+    <h2>001 山中伸弥</h2>
+    <dl>
+            <dd>生年月：1962年9月</dd>
+            <dd>卒業：神戸大学医学部医学科　</dd>
+            <dd>職業：医師、医学者</dd>
+            <dd>京都大学iPS細胞研究所名誉所長<br>
+            「成熟細胞が初期化され多能性をもつことの発見」により、2012年のノーベル生理学・医学賞をジョン・ガードンと共同受賞</dd>
+    </dl>
+    <h4>ハードワーカー医師</h4>
+    <p>マラソンが趣味で学生時代にはラグビーや柔道もやっていた、医師の中でも指折りのハードワーカー。研究時には500匹ものマウスを一人で世話していた。そんな中遺伝子組み換えマウスが研究室から逃げちゃったことがある。</p>
+    <details class="accordion-003">
+        <summary>詳細を見る</summary>
+        <div class="detail">
+            <p>
+
+            </p>
+        </div>    
+    </details>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script>
+      //ロードされた際の処理として実施：
+      window.onload = function(){
+  
+        //HTML内に画像を表示
+        html2canvas(document.getElementById("target"),{
+          onrendered: function(canvas){
+            //imgタグのsrcの中に、html2canvasがレンダリングした画像を指定する。
+            var imgData = canvas.toDataURL();
+            document.getElementById("result").src = imgData;
+          }
+        });
+  
+        //ボタンを押下した際にダウンロードする画像を作る
+        html2canvas(document.body,{
+          onrendered: function(canvas){
+            //aタグのhrefにキャプチャ画像のURLを設定
+            var imgData = canvas.toDataURL();
+            document.getElementById("ss").href = imgData;
+          }
+        });
+  
+      }
+    </script>
+
+    
+</body>
+</html>

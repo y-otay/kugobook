@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="character.css"></rink>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.html</title>
+    <script src="//cdn.jsdelivr.net/npm/html2canvas@1.3.2/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <button id="make_canvas"><img src="https://illustimage.com/photo/11696.png"></button>
+    <div id="target">
+            <div class="image">
+        <img src="https://nureyon.com/sample/52/camera-1-p0.svg?1602486181">
+    </div>
+    <a href="book.html">
+        <img id="back" src="c:\Users\3110m\Downloads\図1.png">
+    </a>
+    <div class="prize">
+        <img src="">
+    </div>
+    <h2>0</h2>
+    <dl>
+            <dd>生年月：19年月</dd>
+            <dd>卒業：学部　</dd>
+            <dd>職業：</dd>
+            <dd></dd>
+    </dl>
+    <h4></h4>
+    <p></p>
+    </div>
+    <details class="accordion-003">
+        <summary>詳細を見る</summary>
+        <div class="detail">
+            <p>
+
+            </p>
+        </div>    
+    </details>
+    <div id="result"></div>
+    <script>
+        var button = document.getElementById('make_canvas');
+    button.addEventListener('click', function(){
+    
+        html2canvas(document.getElementById('target'),{
+            // オプション
+            width: 650,                // 幅を設定
+            height: 650,            // 高さを設定
+            windowWidth: 650,    // html2canvas の幅
+        }).then(function(canvas){
+            document.getElementById('result').src = canvas.toDataURL();
+        })
+    
+    });
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
